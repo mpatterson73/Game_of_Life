@@ -91,9 +91,15 @@ def render(state, on_str="#", off_str=" "):
     return
 
 
-width = 5
-height = 5
-board_state = random_state(width, height)
+width = 100
+height = 30
+board_state = random_state(height, width)
 system("cls" if name == "nt" else "clear")
-# render(board_state)
+render(board_state)
+state = get_next_state(board_state)
+for i in range(1000):
+    system("cls" if name == "nt" else "clear")
+    render(state)
+    state = get_next_state(state)
+
 # print(board_state)

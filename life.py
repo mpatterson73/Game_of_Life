@@ -67,8 +67,8 @@ def new_cell_state(cell_neighbors):
 
 
 def get_next_state(current_state):
-    height, width = np.shape(current_state)
-    next_state = dead_state(height, width)
+    cs_rows, cs_cols = np.shape(current_state)
+    next_state = dead_state(cs_rows, cs_cols)
     wrapped_state = zero_wrap((current_state))
     ws_rows, ws_cols = np.shape(wrapped_state)
     for row in range(1, ws_rows - 1):

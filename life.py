@@ -5,6 +5,8 @@
 
 import numpy as np
 from os import name, system
+from time import sleep
+from start_state import toad, cross, board_state
 
 
 def dead_state(height=5, width=5):
@@ -28,6 +30,7 @@ def random_state(height=5, width=5):
     return state.astype(int)
 
 
+# determines if a singles cell's 8 neighbors are 'live'
 def live_neighbors(state):
     live_count = 0
     cell = state[1][1]
@@ -41,8 +44,9 @@ def live_neighbors(state):
         return live_count
 
 
-# wrap a board state in a 'circle' of zeros.
-# help's elimate errors when finding edge cell neigbors.
+# wrap a board state in a 'circle' to
+# elimate errors when finding edge cell neigbors.
+# only accepts numpy.ndarrays
 def zero_wrap(state):
     state = state.tolist()
     new_row = [0 for col in range(len(state[0]) + 2)]
@@ -91,15 +95,18 @@ def render(state, on_str="#", off_str=" "):
     return
 
 
-width = 100
-height = 30
-board_state = random_state(height, width)
+width = 200
+height = 100
+# board_state = random_state(height, width)
+# board_state = np.array(init_state)
 system("cls" if name == "nt" else "clear")
 render(board_state)
 state = get_next_state(board_state)
-for i in range(1000):
+next_state = get_next_state(state)
+while not np.array_equal(next_state, state):
     system("cls" if name == "nt" else "clear")
     render(state)
     state = get_next_state(state)
+    next_state = get_next_state(state)
+# sleep(0.02)
 
-# print(board_state)

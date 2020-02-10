@@ -95,8 +95,6 @@ def render(state, on_str="#", off_str=" "):
     return
 
 
-width = 200
-height = 100
 # board_state = random_state(height, width)
 # init_state = np.array(three_lines)
 # init_state = np.array(cross)

@@ -6,7 +6,7 @@
 import numpy as np
 from os import name, system
 from time import sleep
-from start_state import toad, cross, board_state
+from start_state import toad, cross, three_lines, name
 
 
 def dead_state(height=5, width=5):
@@ -98,10 +98,13 @@ def render(state, on_str="#", off_str=" "):
 width = 200
 height = 100
 # board_state = random_state(height, width)
-# board_state = np.array(init_state)
+# init_state = np.array(three_lines)
+# init_state = np.array(cross)
+init_state = np.array(name)
 system("cls" if name == "nt" else "clear")
-render(board_state)
-state = get_next_state(board_state)
+render(init_state)
+sleep(5)
+state = get_next_state(init_state)
 next_state = get_next_state(state)
 while not np.array_equal(next_state, state):
     system("cls" if name == "nt" else "clear")

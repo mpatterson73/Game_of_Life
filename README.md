@@ -8,3 +8,5 @@ The universe of the *Game of Life* is an infinite, two-dimensional [orthogona
 4.  Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 Source: [Wikipedia](https://en.wikipedia.org/wiki/Conway's_Game_of_Life)
+
+![example](cross.gif)

@@ -8,7 +8,7 @@ mkl-fft==1.0.15
 mkl-service==2.3.0
 numpy==1.17.4
 olefile==0.46
-Pillow==7.1.0
+Pillow==8.1.1
 pip==19.3.1
 pycodestyle==2.5.0
 setuptools==42.0.2.post20191203

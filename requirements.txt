@@ -2,7 +2,7 @@ appdirs==1.4.3
 attrs==19.3.0
 autopep8==1.4.4
 black==19.3b0
-certifi==2019.11.28
+certifi==2022.12.7
 Click==7.0
 mkl-fft==1.0.15
 mkl-service==2.3.0

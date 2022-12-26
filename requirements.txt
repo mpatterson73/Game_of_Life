@@ -14,4 +14,4 @@ pycodestyle==2.5.0
 setuptools==42.0.2.post20191203
 six==1.13.0
 toml==0.10.0
-wheel==0.33.6
+wheel==0.38.1

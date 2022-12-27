@@ -11,7 +11,7 @@ olefile==0.46
 Pillow==8.2.0
 pip==19.3.1
 pycodestyle==2.5.0
-setuptools==42.0.2.post20191203
+setuptools==65.5.1
 six==1.13.0
 toml==0.10.0
 wheel==0.33.6
